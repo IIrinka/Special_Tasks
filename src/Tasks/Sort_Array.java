@@ -57,4 +57,19 @@ public class Sort_Array {
         System.out.println("Descedning order: "+Arrays.toString(Descendning));
 
     }
+    public static void SortWithWile(int[] arr){
+        int temp = 0;
+        boolean check = true;
+        while (check) {
+            check = false;
+
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
+                    check = true;
+                } } }
+        System.out.println(Arrays.toString(arr));
+    }
 }
