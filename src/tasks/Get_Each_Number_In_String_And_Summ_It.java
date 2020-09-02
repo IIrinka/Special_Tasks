@@ -21,8 +21,8 @@ public class Get_Each_Number_In_String_And_Summ_It {
                     int num = Integer.valueOf(""+str.charAt(i));
                     sum+=num;
                 } }
-            System.out.println(numsSequence);      //   322164
-            System.out.println(sum);               //   18
+            System.out.println(numsSequence);      //   3221641
+            System.out.println(sum);               //   19
         }
     public static void getNumberFromStringAndSumm2(String str){
 /*
@@ -38,8 +38,8 @@ considered 14 and not 1 and 4 separate
                 if(i == str.length()-1 || !Character.isDigit(str.charAt(i+1))){
                     sum += Integer.parseInt(num);
                     num = "";
-                } }}
-        System.out.println(sum);
+                } }}               //   3221641
+        System.out.println(sum);   //   73
 
     }
     public static void RemuveDidgitFromString(String str){
@@ -53,7 +53,7 @@ considered 14 and not 1 and 4 separate
                 sum+=eachNum;
             } }
         System.out.print(sum+"\n");
-        System.out.print(s1+" ");
+        System.out.print(s1+" ");    //  19
 
     }
     }

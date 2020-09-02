@@ -7,6 +7,9 @@
    LinkedHashSet<Integer> linkArr=new LinkedHashSet<>(Arrays.asList(numbers));
    Integer[] newArr = linkArr.toArray(new Integer[]{});
 
+           String [] arr = str.split("");  //  String -> LinkedHashSe
+           LinkedHashSet<String> set = new LinkedHashSet<>(Arrays.asList(arr));
+
    public static List<String> noZ(List<String> strings) {   //  Collectors Ex:
           strings.removeIf(n -> n.contains("z"));
            return strings;

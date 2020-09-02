@@ -10,26 +10,24 @@ import static java.util.stream.Collectors.toSet;
 
 
 public class P_3 {
-    public static void main(String[] args) {
 
-        List<String> listWithDuplicates = Arrays.asList("a", "bb", "c", "d", "bb");
-        Set<String> result = listWithDuplicates.stream().collect(toSet());
-        System.out.println(result.size());
 
-    }
+        // Driver method
+        public static void main(String[] args) {
 
-    public List<String> no9(List<String> strings) {
-/**
+            Integer[] arr = {2,4,3,6,78,3,2,1,2};
+            Test(arr);
 
- Given a list of non-negative integers, return a list of those numbers except omitting
- any that end with 9.
- no9([1, 2, 19]) → [1, 2]
- no9([9, 19, 29, 3]) → [3]
- no9([1, 2, 3]) → [1, 2, 3]
- */
+        }
 
-        return strings.stream()
-                .map(n -> n + "y").filter(n -> !n.contains("yy"))
-                .collect(Collectors.toList());
-    }
+        public static void Test(Integer[] arr){
+
+            Set<Integer> set = new TreeSet<>(Arrays.asList(arr));
+
+            Integer[] newArr = set.toArray(new Integer[]{});
+            System.out.println(Arrays.toString(newArr));
+
+        }
+
+
 }

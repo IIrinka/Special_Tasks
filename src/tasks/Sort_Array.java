@@ -1,13 +1,34 @@
 package tasks;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Sort_Array {
+
     public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 4, 4, 5, 2, 3, 1));
+        System.out.println(sortList(list));
+        int[] arr = {12,2,34,3,12,4,2,4};
+        Integer[] intArr = {2,4,3,1,5,7,8,6,5,4,3,2,3,4};
+        Arrays.sort(intArr);
+        System.out.println(Arrays.toString(intArr));
+        SortWithCollectionsNoDuplicates(intArr);
 
-        int[] arr = {12,2,34,3,12,4,2,4};   //  Sort Array without Sort
-        System.out.println(Arrays.toString(arr));
 
+    }
+
+    public static ArrayList<Integer> sortList(ArrayList<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = 0; j < list.size(); j++) {
+                if (list.get(i) < list.get(j)) {
+                    int temp = list.get(i);
+                    list.set(i, list.get(j));
+                    list.set(j, temp);
+                }
+            }
+        }
+        return list;
+    }
+    public static void SortArrayWithoutSort(int[] arr){
         int temp=0;
         for(int i = 0; i<arr.length ; i++){
             for(int j=i+1 ; j<arr.length ; j++){
@@ -16,46 +37,25 @@ public class Sort_Array {
                     arr[i]=arr[j];
                     arr[j]=temp;
                 } } }
-        System.out.println(Arrays.toString(arr));
-        System.out.println();
-
-        System.out.println("==============================");
-
-        int[] nums = {12,2,34,3,12,4,2,4};   //    change array from end to beginning NO SORT
-        System.out.println(Arrays.toString(nums));
+    }
+    public static void SortArrayWithoutSort1(int[] nums){
+        int temp=0;
         for(int i=0;i<nums.length/2;i++){
             temp=nums[i];
             nums[i]=nums[nums.length-1-i];
             nums[nums.length-1-i]=temp;
         }
-        System.out.println(Arrays.toString(nums));
-        System.out.println("==============================");
-
-        int[]  MyNumbers = { 99,10,200, 3000, 40, 50, 5000};
-        Arrays.sort(MyNumbers);
-        System.out.println( Arrays.toString(MyNumbers) );
-
-        String result ="[";
-        for(int i = MyNumbers.length-1; i  >= 0; i--) {
-            result += MyNumbers[i] + ", ";
-        }
-
-        result = result.substring(0, result.length()-2)+"]";
-        System.out.println(result);
-        System.out.println("==============================");
-// write a return method that accepts an int array and sorts it in descending order
-        int[] arr2 = { 99,10,200, 3000, 40, 50, 5000};
+    }
+    public static void SortArrayDescending(int[] arr2){
         Arrays.sort(arr2);  //  array will be sorted in Acsending order
 
-        int[] Descendning = new int[arr2.length];
+        int[] Descending = new int[arr2.length];
         int z=0;
         for(int i = arr2.length-1; i >=0; i-- ) {
-            Descendning[ z ] = arr2[i];
+            Descending[z] = arr2[i];
             z++;
         }
-        System.out.println( "Ascending order: "+ Arrays.toString(arr2));
-        System.out.println("Descedning order: "+Arrays.toString(Descendning));
-
+        System.out.println("Descedning order: "+Arrays.toString(Descending));
     }
     public static void SortWithWile(int[] arr){
         int temp = 0;
@@ -72,4 +72,10 @@ public class Sort_Array {
                 } } }
         System.out.println(Arrays.toString(arr));
     }
+    public static void SortWithCollectionsNoDuplicates(Integer [] arr){
+        Set<Integer> set = new TreeSet<>(Arrays.asList(arr));
+        Integer[] newArr = set.toArray(new Integer[]{});
+        System.out.println(Arrays.toString(newArr));
+    }
 }
+

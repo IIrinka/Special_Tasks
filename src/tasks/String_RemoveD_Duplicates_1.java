@@ -1,6 +1,6 @@
 package tasks;
 
-public class RemuveDuplicatedAndFriquencyOfCharacters_2 {
+public class String_RemoveD_Duplicates_1 {
     public static void main(String[] args) {
 
 
