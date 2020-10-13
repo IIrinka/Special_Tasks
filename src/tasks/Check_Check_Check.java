@@ -1,6 +1,6 @@
 package tasks;
 
-public class check_check_check {
+public class Check_Check_Check {
 
     public static void main(String[] args) {
 
@@ -10,7 +10,7 @@ public class check_check_check {
 /*
 Notebook:
 Create a method that divides A by B,
-For example input is: 13,5
+For example input is: 13 / 5
 gives output: “Result is 2 and remainder is 3”
 You can’t use “*” and “/“ operators.
 public static void divider(final int a, final int b) {

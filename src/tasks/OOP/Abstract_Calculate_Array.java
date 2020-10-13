@@ -1,4 +1,4 @@
-package tasks;
+package tasks.OOP;
 
 import java.util.Arrays;
 import java.util.List;

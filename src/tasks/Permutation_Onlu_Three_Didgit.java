@@ -1,6 +1,6 @@
 package tasks;
 
-public class Permutation {
+public class Permutation_Onlu_Three_Didgit {
 
 
 

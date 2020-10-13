@@ -20,7 +20,7 @@
            List<String> superHeroCopy = new ArrayList<>(strList);  //  copy From List to List
 
            List<String> topic = Arrays.asList("Java", "Selenium", "Database", "API");  //  Unmodifiable but in on row
-           List<String> topicsCopy = new ArrayList<>(topic);    //      This you can modifi
+           List<String> topicsCopy = new ArrayList<>(topic);    //      This you can modify
            List<String> topicInOneShot = new ArrayList<>(Arrays.asList("Java", "Selenium", "Database", "API"));
 
            String str = String.valueOf(123);         //   int-->String
@@ -84,6 +84,10 @@
                System.out.println( Arrays.toString(arr2D) ); // arrays.toString cannot convert MD arrays to String
                System.out.println(Arrays.deepToString(arr2D)); // deepToString-> convert MD arrays to String
 
+                                                                     // forEach(action) method to iterate map
+               mapName.forEach((k,v) -> System.out.println("Key = "+ k + ", Value = " + v));
 
-           }
-       }}
+               if(Math.abs(nums1[i] - nums2[i])<=2 && nums1[i] != nums2[i]){    //  Math count function for array
+                            count++;
+                        }
+

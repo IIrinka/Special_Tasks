@@ -48,6 +48,12 @@ public class Fibonacci {
             System.out.print(" " + next);
 
         } }
+    public static int fibonacci11(int n) {  //  recurcive
 
+        if (n == 0) return 0;
+        else if (n == 1) return 1;
+        return fibonacci11(n - 1) + fibonacci11(n - 2);
+
+    }
 }
 
